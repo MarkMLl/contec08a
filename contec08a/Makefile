@@ -37,9 +37,11 @@ contec08a-$(CPU)-$(OPSYS): Makefile $(INIFILES)/inifilesabout.o $(SERIALCOMMS)/m
 ############
 
 clean:
-	rm -f contec08a*.ppu contec08a*.o contec08a.or
+	rm -f contec08a*.ppu contec08a*.o consoleapp.ppu consoleapp.o contec08a.or
 	rm -f $(INIFILES)/inifilesabout.o $(INIFILES)/inifilesabout.ppu
 	rm -f $(SERIALCOMMS)/monitorhidlinux.o $(SERIALCOMMS)/monitorhidlinux.ppu
+	rm -f $(SERIALCOMMS)/locateports.o $(SERIALCOMMS)/locateports.ppu
+	rm -f $(SERIALCOMMS)/netlink.o $(SERIALCOMMS)/netlink.ppu
 
 distclean: clean
 	rm -f contec08a-$(CPU)-$(OPSYS)
